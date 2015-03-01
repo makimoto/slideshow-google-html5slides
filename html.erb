@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <title><%= @headers['title'] %></title>
+    <link class="theme" href="styles/styles.css" rel="stylesheet" type="text/css" media="screen" />
+  </head>
+
+  <body style='display: none'>
+    <section class='slides layout-regular template-default'>
+      <article class="nobackground">
+        <h1>
+          <%= @headers['title'] %>
+        </h1>
+        <p>
+          <%= @headers['author'] %>
+        </p>
+      </article>
+
+      <% @slides.each_with_index do |slide| %>
+      <article class="nobackground">
+        <h3><%= slide.header %></h3>
+        <%= slide.content_without_header %>
+      </article>
+      <% end %>
+    </section>
+
+    <!--[if lt IE 9]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
+    </script>
+    <script>CFInstall.check({ mode: "overlay" });</script>
+    <![endif]-->
+
+    <script src="js/prettify.js" onload="prettyPrint();" defer></script>
+    <script src="js/slides.js"></script>
+  </body>
+</html>
