@@ -13,6 +13,3 @@ __file__.html   html.erb
 js/slides.js
 js/prettify.js
 
-# styles
-
-styles/styles.css

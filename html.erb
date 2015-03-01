@@ -17,7 +17,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
     <title><%= @headers['title'] %></title>
-    <link class="theme" href="styles/styles.css" rel="stylesheet" type="text/css" media="screen" />
   </head>
 
   <body style='display: none'>
@@ -33,7 +32,9 @@
 
       <% @slides.each_with_index do |slide| %>
       <article class="nobackground">
-        <h3><%= slide.header %></h3>
+        <header>
+          <%= slide.header %>
+        <header>
         <%= slide.content_without_header %>
       </article>
       <% end %>
