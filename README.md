@@ -6,7 +6,11 @@ A [Slide Show (s9)](http://slideshow-s9.github.io/) templete based on Google's [
 Note that existing [slideshow-templates/slideshow-google-html5-slides](https://github.com/slideshow-templates/slideshow-google-html5-slides) is based on slides.html5rocks.com.
 
 # Usage
-TODO
+
+```
+$ slideshow install https://raw.githubusercontent.com/makimoto/slideshow-google-html5slides/master/google-html5slides.txt
+$ slideshow build slides -t google-html5slides
+```
 
 # Authors
 ## Original Authors
